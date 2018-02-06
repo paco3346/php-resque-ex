@@ -604,8 +604,8 @@ class Resque_Worker
     /**
      * Output a given log message to STDOUT.
      *
-     * @param string $message Message to output.
-     * @return  boolean True if the message is logged
+     * @param mixed $message Message to output.
+     * @return boolean True if the message is logged
      */
     public function log($message, $code = self::LOG_TYPE_INFO)
     {

@@ -214,6 +214,7 @@ class Resque_Job
             //pass in the original event and only work if it exists
             if (!empty($this->event['_id'])) {
                 $this->worker->log([
+                    'message' => 'Streaming stdout',
                     'data' => [
                         'type' => 'process',
                         'output' => $this->output,
