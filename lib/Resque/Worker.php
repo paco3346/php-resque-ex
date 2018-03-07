@@ -284,7 +284,7 @@ class Resque_Worker
                     'output' => $job->getOutput(),
                     'time' => round(microtime(true) - $startTime, 3) * 1000]
             ], self::LOG_TYPE_INFO);
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
             $this->log([
                 'message' => $job . ' failed: ' . $e->getMessage(),
                 'data' => [
